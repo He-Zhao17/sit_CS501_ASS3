@@ -4,6 +4,9 @@ import java.util.stream.StreamSupport;
 
 public class A5E16_5E20_6E10 {
     public static void main (String[] args) {
+        System.out.println("This tool is to find the prime numbers less than 1000 and more than 1" +
+                ". \nAnd We will store them in array. \nYou can input a number in that limitation and we " +
+                "reply that whether it is a prime number and give its factors.\n\n");
         System.out.println("Now we find the number of the prime numbers less than 1000.");
         System.out.println("And we will populate an array to store those numebrs.");
         System.out.println("-----------------------------------------------------------");
@@ -59,12 +62,15 @@ public class A5E16_5E20_6E10 {
         System.out.println("-----------------------------------------------------------");
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Now please input a number less than 1000: ");
+        System.out.print("Now please input a number less than 1000 (if quit, input -1): ");
         while (scan.hasNextInt()) {
             int input1 = scan.nextInt();
+            if (input1 == -1) {
+                break;
+            }
             if (input1 < 2 || input1 >= 1000) {
                 System.out.println("Error: incorrect number input.\n\n");
-                System.out.print("Now please input a number less than 1000: ");
+                System.out.print("Now please input a number less than 1000(if quit, input -1): ");
                 continue;
             }
             int dIndex = 0;
@@ -85,7 +91,7 @@ public class A5E16_5E20_6E10 {
             }
             if (isInArr) {
                 System.out.println("Prime Number.\n\n");
-                System.out.print("Now please input a number less than 1000: ");
+                System.out.print("Now please input a number less than 1000(if quit, input -1): ");
             } else {
                 ArrayList<Integer> sol = new ArrayList<Integer>();
                 int i = 2;
@@ -103,7 +109,7 @@ public class A5E16_5E20_6E10 {
                     System.out.print(sol.get(j) + " ");
                 }
                 System.out.println("\n\n");
-                System.out.print("Now please input a number less than 1000: ");
+                System.out.print("Now please input a number less than 1000(if quit, input -1): ");
             }
         }
 
